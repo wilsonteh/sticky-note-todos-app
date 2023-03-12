@@ -1,4 +1,14 @@
+"use client"
+
+import { useState } from "react";
+
 const NewNoteForm = () => {
+
+  const [form, setForm] = useState({
+    title: "",
+    description: "",
+  });
+
   return (
     <form className="flex flex-col gap-4 border-[1px] border-gray-700 w-[400px] mx-auto mt-4 
       p-4 text-sm">
