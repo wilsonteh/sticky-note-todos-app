@@ -15,11 +15,14 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body>
+        
         <Header />
 
-        <section> {children} </section>
+        <div className="max-w-[800px] mx-auto"> 
+          {children} 
+        </div>
+
       </body>
     </html>
   )
 }
-

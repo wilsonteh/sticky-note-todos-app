@@ -1,4 +1,3 @@
-import Grid from "@/components/Grid";
 import NewNoteForm from "@/components/NewNoteForm";
 import StickyNote from "@/components/StickyNote";
 import { supabase } from "@/lib/supabaseClient";
@@ -22,12 +21,12 @@ export default async function Home() {
   return (
     <div>
       <NewNoteForm />
-      
-      <Grid>
+
+      <section className="mt-4 grid grid-cols-3 gap-4">
         { notes?.map((note) => (
           <StickyNote key={note.id} data={note} />
         ))}
-      </Grid>
+      </section>      
 
     </div>
   )
