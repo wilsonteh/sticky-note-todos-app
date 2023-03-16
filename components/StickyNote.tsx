@@ -7,11 +7,7 @@ interface Note {
   created_at: string;
 }
 
-interface StickyNoteProps {
-  data: Note;
-}
-
-const StickyNote = ({ data: note}: StickyNoteProps) => {
+const StickyNote = (note: Note) => {
 
   return (
     <Link href={`/note/${note.id}`} 
